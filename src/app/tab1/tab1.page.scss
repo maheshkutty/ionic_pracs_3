@@ -1,0 +1,79 @@
+.headerStyle {
+  background-color: rgba(0,50,106,0.80);
+  padding: 20px;
+  color: #ffcb0b;
+  font-weight: bold;
+}
+
+.welContainer {
+  font-size: 30px;
+  text-align: center;
+  font-weight: bold;
+  color: rgba(0,50,106,0.80);
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scrollbar-width: none;
+
+  .scroll {
+    min-width: 180px;
+    flex: 0 0 auto;
+    scrollbar-width: none;
+    margin: 5px 5px 5px 5px;
+    background-color: rgba(0,50,106,0.80);
+    color: #ffcb0b;
+  }
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+.scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.timelec {
+  display: flex;
+  align-items: center;
+}
+
+.timelec > span {
+  font-size: 15px;
+  margin-right: 5px;
+}
+
+.timelec > ion-icon {
+  font-size: 18px;
+  margin-right: 5px;
+}
+
+.todayDateStyle{
+  font-size: 20px;
+}
+
+.labelCommon{
+  margin-left: 15px; 
+  font-size: 15px;
+  text-align: center;
+  color: rgba(0,50,106,0.80);
+}
+
+.linkcardcontainer{
+  height: 100px; 
+  display: flex; 
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; 
+  align-content: center;
+  margin: 0;
+}
+
+.linkstyle{
+  text-decoration: none;
+  color: black;
+}

@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <div style="display: flex; flex-direction: row;">
+      <ion-back-button [text]="buttonText" [icon]="buttonIcon">
+      </ion-back-button>
+      <ion-title>Faculty Profile</ion-title>
+    </div>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item
+      *ngFor="let item of facilityData"
+      class="ion-align-items-start container"
+      style="margin: -10px"
+    >
+      <div class="ion-margin-top" style="margin-right: 5px">
+        <img
+          src="https://raw.githubusercontent.com/ionic-team/ionic-docs/1a293668c4ad4ba18cc1c4f53fc5d1b6523e8637/src/demos/api/avatar/avatar.svg"
+          *ngIf="item.facultyImg === null; else elseBlock"
+          class="imgStyle"
+        />
+        <img
+          [src]="item.facultyImg"
+          *ngIf="item.facultyImg !== null"
+          class="imgStyle"
+        />
+      </div>
+      <ion-label class="ion-text-wrap listitem">
+        <div
+          style="
+            background-color: rgba(0, 50, 106, 0.8);
+            color: white;
+            padding: 5px;
+            border-radius: 5px;
+          "
+        >
+          <h2 class="nameStyle">{{item.name}}</h2>
+          <h3 style="font-style: italic; font-weight: bold">
+            {{item.position}}
+          </h3>
+        </div>
+        <h3 style="margin-top: 5px; color: #003366">{{item.areaOfInterest}}</h3>
+        <div class="ion-float-right linklist">
+          <a
+            [href]="item.personalPage"
+            target="blank"
+            class="linklist"
+            style="color: #003366"
+            ><ion-icon name="link" class="linkicon"></ion-icon>
+          </a>
+          <a [href]="item.linkedinpage" target="blank" class="linklist"
+            ><img src="/assets/linkedin.png" class="pageIconStyle"
+          /></a>
+        </div>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
